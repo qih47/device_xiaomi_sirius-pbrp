@@ -40,14 +40,18 @@ BOARD_INCLUDE_RECOVERY_DTBO := true
 BOARD_BOOTIMG_HEADER_VERSION := 1
 BOARD_KERNEL_PAGESIZE := 4096
 
+BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8
+BOARD_KERNEL_CMDLINE += earlycon=msm_geni_serial,0xA90000
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom androidboot.usbcontroller=a600000.dwc3 loop.max_part=7 swiotlb=1
 BOARD_KERNEL_CMDLINE += video=vfb:640x400,bpp=32,memsize=3072000 msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1
 BOARD_KERNEL_CMDLINE += service_locator.enable=1 androidboot.configfs=true firmware_class.path=/vendor/firmware_mnt/image
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x00000000
-BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 BOARD_RAMDISK_OFFSET     := 0x01000000
+BOARD_KERNEL_OFFSET := 0x00008000
+BOARD_KERNEL_BASE := 0x00000000
+BOARD_SECOND_OFFSET := 0x00f00000
 TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/prebuilt/Image.gz-dtb
 BOARD_PREBUILT_DTBOIMAGE := $(LOCAL_PATH)/prebuilt/dtbo.img
 
@@ -93,7 +97,7 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
 BOARD_SUPPRESS_SECURE_ERASE := true
 RECOVERY_SDCARD_ON_DATA := true
-TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/recovery.fstab
+TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/recovery/root/etc/twrp.fstab
 
 # QCOM Fix
 TARGET_RECOVERY_QCOM_RTC_FIX := true
@@ -120,6 +124,7 @@ TW_NO_SCREEN_TIMEOUT := false
 PB_DISABLE_DEFAULT_DM_VERITY := true
 TW_SCREEN_BLANK_ON_BOOT := true
 TW_DEVICE_VERSION := 1
+TW_CUSTOM_CPU_TEMP_PATH := /sys/class/thermal/thermal_zone9/temp
 
 
 TW_OZIP_DECRYPT_KEY := "1c4c1ea3a12531ae491b21bb31613c11"
