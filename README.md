@@ -1,4 +1,4 @@
-This repository contains device configuration for Xiaomi MI 8 SE (Sirius)
+## This repository contains device configuration for Xiaomi MI 8 SE (Sirius)
 
 Basic   | Spec Sheet
 -------:|:----------
@@ -14,22 +14,7 @@ Display | 1080x2244 pixels, 5.88 AMOLED
 Rear Camera  | 12MP+5MP, AI Dual Camera
 Front Camera | 20 MP
 
-![Xiaomi MI 8 SE](https://www.teknosaurus.com/wp-content/uploads/2018/06/xiaomi-mi-8-SE-2.jpg "Xiaomi MI 8 SE")
+## Device Picture
+![Xiaomi MI 8 SE](https://avatars.mds.yandex.net/get-mpic/1220464/img_id5786038835139169972.jpeg/orig "Xiaomi MI 8 SE")
 
-## Copyright
 
-```
-#
-# Copyright (C) 2018 The LineageOS Project
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#      http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
